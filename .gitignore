@@ -44,5 +44,5 @@ next-env.d.ts
 supabase/.env
 supabase/.env.local
 
-# Stripe
-.stripe-*
+# Local terminal logs
+/terminals/

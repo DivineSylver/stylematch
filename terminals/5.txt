@@ -1,7 +1,0 @@
----
-pid: 14808
-cwd: "C:\Users\sylve\OneDrive\Documents\Grok build"
-command: "vercel --version"
-started_at: 2026-06-16T23:40:27.433Z
-running_for_ms: 9981     
----
