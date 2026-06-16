@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #111111;
+  --card-border: #222222;
+  --accent: #1d9bf0;
+  --accent-hover: #1a8cd8;
+  --success: #00ba7c;
+  --warning: #f59e0b;
+  --danger: #f87171;
+}
+
+body {
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+.tweet-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  transition: all 0.1s ease;
+}
+
+.tweet-card:hover {
+  border-color: #333;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  transition: background 0.1s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #1f2937;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  border: 1px solid #374151;
+  transition: all 0.1s;
+}
+
+.btn-secondary:hover {
+  background: #374151;
+}
+
+.input {
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  width: 100%;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.textarea {
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 12px;
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  outline: none;
+  font-family: inherit;
+}
+
+.textarea:focus {
+  border-color: var(--accent);
+}
+
+.points-badge {
+  background: #1f2937;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.generated-post {
+  background: #0f0f0f;
+  border: 1px solid #222;
+  padding: 16px;
+  border-radius: 12px;
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.nav-link {
+  color: #9ca3af;
+  transition: color 0.1s;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.gate {
+  opacity: 0.6;
+  pointer-events: none;
+}

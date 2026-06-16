@@ -1,0 +1,46 @@
+---
+pid: 15584
+cwd: "C:\Users\sylve\OneDrive\Documents\Grok build"
+command: "cd \"C:\\Users\\sylve\\OneDrive\\Documents\\Grok build\"; Remove-Item -Recurse -Force .next -ErrorAction SilentlyContinue; npm run build"
+started_at: 2026-06-16T23:31:53.169Z
+running_for_ms: 254340   
+---
+
+> twitter-style-emulator@0.1.0 build
+> next build
+
+▲ Next.js 16.2.0 (Turbopack)
+- Environments: .env.local
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.9min
+  Running TypeScript ...
+  Finished TypeScript in 72s ...
+  Collecting page data using 1 worker ...
+  Generating static pages using 1 worker (0/12) ...
+  Generating static pages using 1 worker (3/12) 
+  Generating static pages using 1 worker (6/12) 
+  Generating static pages using 1 worker (9/12) 
+✓ Generating static pages using 1 worker (12/12) in 14.7s
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/creator/insights
+├ ƒ /api/generate
+├ ○ /creator
+├ ○ /dashboard
+├ ○ /icon.svg
+├ ○ /login
+├ ○ /pricing
+├ ○ /signup
+└ ○ /topup
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
