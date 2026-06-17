@@ -185,7 +185,7 @@ function buildTweet(
 
   const templates: Record<typeof hook, string[]> = {
     question: [
-      `What if ${t} isn't talent — it's ${angle}?`,
+      `What if ${t} isn't talent - it's ${angle}?`,
       `Why do so many people talk about ${t} but skip ${angle}?`,
       `Is ${t} actually hard — or are we just avoiding ${angle}?`,
     ],
@@ -201,7 +201,7 @@ function buildTweet(
     ],
     observation: [
       `The pattern I keep seeing with ${t}: ${angle}.`,
-      `${opener.charAt(0).toUpperCase() + opener.slice(1)} thing about ${t} — it compounds when you focus on ${angle}.`,
+      `${opener.charAt(0).toUpperCase() + opener.slice(1)} thing about ${t} - it compounds when you focus on ${angle}.`,
       `@${handle.replace(/^@/, '')} energy applied to ${t}: ${angle}.`,
     ],
     list: [
@@ -216,7 +216,7 @@ function buildTweet(
     imperative: [
       `If you're serious about ${t}, start with ${angle}.`,
       `Stop collecting ${t} tips. Pick one path: ${angle}.`,
-      `Build ${t} the unsexy way — ${angle}, every week.`,
+      `Build ${t} the unsexy way - ${angle}, every week.`,
     ],
   };
 
@@ -242,7 +242,7 @@ function buildTweet(
   }
 
   if (style.signatureWords.length && index === 0) {
-    text = text.replace(angle, `${angle} — ${sig} mindset`);
+    text = text.replace(angle, `${angle} - ${sig} mindset`);
   }
 
   return applyStyle(text, style, index);
