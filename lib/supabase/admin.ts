@@ -1,18 +1,29 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Server-only admin client. Uses service role key. Never import in client components.
-export function createAdminClient() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+function isConfigured(): boolean {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL ?? '';
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY ?? '';
+  return (
+    url.length > 20 &&
+    !url.includes('your-project') &&
+    key.length > 20 &&
+    !key.includes('...')
+  );
+}
 
-  if (!url || !key) {
-    throw new Error('Missing Supabase service role env vars');
+export function createAdminClient() {
+  if (!isConfigured()) {
+    throw new Error('Supabase not configured');
   }
 
-  return createClient(url, key, {
-    auth: {
-      autoRefreshToken: false,
-      persistSession: false,
-    },
-  });
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    {
+      auth: {
+        autoRefreshToken: false,
+        persistSession: false,
+      },
+    }
+  );
 }
