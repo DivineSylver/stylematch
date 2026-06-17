@@ -223,7 +223,7 @@ function buildTweet(
   const options = templates[hook] || templates.observation;
   let text = options[index % options.length];
 
-  if (style.usesSecondPerson && !text.includes('you')) {
+  if (style.usesSecondPerson && index % 2 === 1 && !text.includes('you')) {
     text = `If you're working on ${t}, remember: ${angle}.`;
   }
 
@@ -241,8 +241,8 @@ function buildTweet(
     text = text.replace(/!+/g, '.').replace(/\?$/, '.');
   }
 
-  if (style.signatureWords.length && index % 3 === 0) {
-    text = `${text} (${sig} energy)`;
+  if (style.signatureWords.length && index === 0) {
+    text = text.replace(angle, `${angle} — ${sig} mindset`);
   }
 
   return applyStyle(text, style, index);
