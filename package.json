@@ -10,7 +10,6 @@
     "setup": "powershell -ExecutionPolicy Bypass -File ./scripts/setup.ps1"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.27.3",
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.45.0",
     "lucide-react": "^0.408.0",

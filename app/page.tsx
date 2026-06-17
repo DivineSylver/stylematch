@@ -58,7 +58,7 @@ export default function Landing() {
               <Zap className="w-5 h-5 text-[#1d9bf0]" />
             </div>
             <h3 className="font-semibold text-lg mb-2">2. Get 7 posts in their voice</h3>
-            <p className="text-[#9ca3af] text-sm">Claude generates fresh tweets under 280 characters. Never copies. Completely free and unlimited.</p>
+            <p className="text-[#9ca3af] text-sm">Our style engine generates fresh tweets under 280 characters. Never copies. $0 cost, unlimited.</p>
           </div>
           <div className="tweet-card p-6 rounded-2xl">
             <div className="w-10 h-10 rounded-xl bg-[#1d9bf0]/10 flex items-center justify-center mb-4">
@@ -74,7 +74,7 @@ export default function Landing() {
         <div className="max-w-4xl mx-auto px-6 py-12 text-center">
           <div className="flex justify-center gap-8 text-sm text-[#666] mb-6">
             <div className="flex items-center gap-2"><Shield className="w-4 h-4" /> Optional Supabase auth</div>
-            <div className="flex items-center gap-2">Claude Sonnet 4</div>
+            <div className="flex items-center gap-2">$0 API costs</div>
             <div className="flex items-center gap-2">Deploy on Vercel</div>
           </div>
           <Link href="/dashboard" className="btn-primary inline-flex items-center gap-2 px-8 py-3 text-base">
